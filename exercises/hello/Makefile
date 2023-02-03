@@ -1,8 +1,11 @@
-out.txt : hello.exe              # out.txt depends on hello.exe
-	mono hello.exe > out.txt # run hello.exe, send output to out.txt
+Out.txt : main.exe                 # Out.txt (dependancy) is made from on main.exe () (Blanks are unimportant)
+	mono main.exe > Out.txt    # Run main.exe, main.exe prints what it will print in terminal in out.txt)
 
-hello.exe : hello.cs             # hello.exe depends on hello.cs
-	mcs hello.cs             # compile hello.cs into hello.exe
+main.exe:main.cs
+	mcs main.cs -out:main.exe -target:exe  # Compile main.cs into main.cs
 
-clean:                           # a phoney target, no dependencies
-	rm -f out.txt hello.exe  # remove secondary files
+clean:
+	rm --force Out.txt main.exe # Remove secondary filed
+
+test-shell:
+	echo $$0
