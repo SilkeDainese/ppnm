@@ -1,8 +1,7 @@
+using System;
+
 class main{
-static int Main(){
-		System.Console.Write("Hello\n"); 
-		return 0;
+	static void Main(string [] args){
+		Console.Write("Hello\n"); 
 }
 }
-
-
