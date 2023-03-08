@@ -1,4 +1,3 @@
-
 using static System.Console;
 using static System.Math;
 
@@ -34,9 +33,9 @@ static class epsilon{
 		double sumA=0,sumB=0;
 		sumA+=1;
 		for(int k=0; k<n; k++) {sumA+=tiny;}
-		Write($"sumA-1 = {sumA-1:e} should be {n*tiny:e}\n");
+			Write($"sumA-1 = {sumA-1:e} should be {n*tiny:e}\n");
 		for(int l=0; l<n;l++) {sumB+=tiny;}
-		Write($"sumB-1 = {sumB - 1:e} should be {n*tiny:e}\n");
+			Write($"sumB-1 = {sumB - 1:e} should be {n*tiny:e}\n");
 
 
 		Write("Exercise 4:\n");

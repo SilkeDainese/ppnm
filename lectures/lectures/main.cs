@@ -12,5 +12,9 @@ class main{
 	static_world.greeting = "new world from main\n";
 	static_hello.print();
 	static_world.print();
+	hello hello1 = new hello("hello1");
+	hello world1 = new hello("world1");
+	hello1.print();
+	world1.pring();
 	}
 }

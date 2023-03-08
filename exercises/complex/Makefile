@@ -1,8 +1,17 @@
+all: Out.txt
+	car $<
+
 Out.txt: main.exe
-	mono main.exe > Out.txt
+	mono $< >$@
 
-cmath.dll: cmath.cs complex.cs
-	mcs -target:library -out:cmath.dll $^
+main.exe : main.cs cmath.dll
+	mcs -reference:cmath.dll main.cs
 
-main.exe: main.cs cmath.dll
-	mcs -target:exe -reference:cmath.dll -out:main.exe main.cs
+clean:
+	rm -rf Out.txt main.exe
+
+DIR = /Users/silke/source/repos/ppnm/exercises/complex/ 
+
+
+cmath.dll: $(DIR)/cmath.cs $(DIR)/complex.cs
+	mcs -target:library -out:./cmath.dll $^
