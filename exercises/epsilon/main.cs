@@ -2,6 +2,11 @@ using static System.Console;
 using static System.Math;
 
 static class epsilon{
+	public static bool approx(double a,double b, double acc=1e-9, double esp=1e-9){
+		if(Abs(b-a) < acc) return true;
+		else if(Abs(b-a) < Max(Abs(a),Abs(b)*esp)) return true;
+		else return false;
+	}	
 	static void Main(){
 		Write("Excerise 1: \n");
 		int i=1;
@@ -39,16 +44,13 @@ static class epsilon{
 
 
 		Write("Exercise 4:\n");
-		double a = 2e-9;
-		double b = 1.5e-9;
-		Write($"a = {a}, b = {b} and |a-b|<1e-9 should be True and it is {approx(a,b)}\n");
-
+		double d1 = 0.1+0.1+0.1+0.1+0.1+0.1+0.1+0.1;
+		double d2 = 8*0.1;
+				
+		WriteLine($"d1={d1:e15}");
+		WriteLine($"d2={d2:e15}");
+		WriteLine($"d1==d2 ? => {d1==d2}");
+		WriteLine($"d1==d2 using approx bool => {approx(d1,d2)}");
 		
-	}
-
-	private static bool approx(double a, double b, double tau=1e-9, double epsilon=1e-9) {
-		if (Abs(a - b) < tau) {return true;}
-		if (Abs(a - b) / (Abs(a) + Abs(b)) < epsilon) {return true;}
-		else {return false;}
 	}
 }

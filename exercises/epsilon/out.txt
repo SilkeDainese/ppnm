@@ -10,4 +10,7 @@ Exercise 3:
 sumA-1 = 0.000000e+000 should be 1.110223e-010
 sumB-1 = -1.000000e+000 should be 1.110223e-010
 Exercise 4:
-a = 2E-09, b = 1.5E-09 and |a-b|<1e-9 should be True and it is True
+d1=7.999999999999999e-001
+d2=8.000000000000000e-001
+d1==d2 ? => False
+d1==d2 using approx bool => True
