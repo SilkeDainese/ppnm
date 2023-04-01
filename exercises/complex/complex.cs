@@ -13,7 +13,7 @@ public double Re {get{return re;}}
 public double Im {get{return im;}}
 
 // constructors
-public complex(double x){this.re = x; this.im = 0;}
+public complex(double x){ this.re = x; this.im = 0; }
 public complex(double x, double y){ this.re=x; this.im=y; }
 // cast
 public static implicit operator complex(double x){return new complex(x);}
@@ -27,8 +27,7 @@ public static readonly complex I    = new complex(0,1);
 // operator~
 public static complex operator ~(complex a){
 	return new complex(a.Re,-a.Im);}
-public complex conj(){
-	return new complex(this.Re,-this.Im);}
+public complex conj(){ return new complex(this.Re,-this.Im);}
 
 // operator+
 public static complex operator +(complex a){return a;}

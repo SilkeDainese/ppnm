@@ -1,4 +1,3 @@
-/* (C) 2020 Dmitri Fedorov; License: GNU GPL v3+; no warranty. */
 using System;
 using static System.Math;
 public static partial class cmath{ /* complex math */
@@ -50,3 +49,4 @@ public static void printf(this complex z,string s)
 	{Console.WriteLine(s,z.Re,z.Im);}
 
 }// cmath
+

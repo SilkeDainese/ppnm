@@ -1,23 +1,13 @@
-using System;
+using static cmath; //I use functions from out library of complex math
 using static System.Console;
-using static System.Math;
-
-class main{
-	static void Main(){
-		complex min1 = new complex(-1,0);
-		WriteLine($"sqrt(-1) = {cmath.sqrt(min1)}");
-		WriteLine("Calculated manially it is: i");
-		WriteLine($"sqrt(i) = {cmath.sqrt(cmath.I)}");
-                WriteLine("Calculated manially it is: 0.707 + 0.707i");
-		WriteLine($"e^i = {cmath.exp(cmath.I)}");
-                WriteLine("Calculated manially it is: 0.54+0.84i");
-		WriteLine($"e^i*pi = {cmath.exp(cmath.I*PI)}");
-                WriteLine("Calculated manially it is: -1");
-		WriteLine($"i^i = {cmath.pow(cmath.I, cmath.I)}");
-                WriteLine("Calculated manially it is: 0.208");
-		WriteLine($"ln(i) = {cmath.log(cmath.I)}");
-                WriteLine("Calculated manially it is: 1.57i");
-		WriteLine($"sin(i*pi) = {cmath.sin(cmath.I*PI)}");
-                WriteLine("Calculated manially it is: 11.55i");
-	}
-}
+public class main{
+public static void Main(){
+	complex sqrt_1 = sqrt(new complex(-1,0));
+	complex E = new complex(System.Math.E, 0);
+	Write($"sqrt(-1) = {sqrt_1}\n");
+	Write($"sqrt(i) = {sqrt(I)}\n");
+	Write($"e^i = {cmath.pow(E, I)}\n");
+	Write($"e^(i*pi) = {cmath.pow(E, I*System.Math.PI)}\n");
+	Write($"i^i = {cmath.pow(I, I)}\n");
+	Write($"ln(i) = {log(I)}\n");
+	Write($"sin(i*pi) = {sin(I*System.Math.PI)}\n");
