@@ -1,39 +1,30 @@
-#RM = rm ---force
+all: Out.txt main1.exe main2.exe 
 
-all: Out.txt
+Out.txt: main1.exe main2.exe Makefile
+	> $@
+	
+	echo "Reading numbers from command-line arguments:" >> $@
+	mono Task1/main1.exe -numbers:1,2,3,4,5 >> $@
 
-Out.txt : main.exe Makefile infile.txt numbers.txt
-	mono main.exe \
-		-input:infile.txt \
-		-output:outfile.txt \
-		-numbers:1,2,3,4,5,6 1> $@ 2> log < infile.txt
-	cat infile.txt | mono main.exe  \
-		-input:infile.txt \
-		-output:outfile.txt \
-		-numbers:1,2,3,4,5,6 1>> $@ 2>> log
-	cat infile.txt | mono main.exe \
-		-input:infile.txt \
-		-output:outfile.txt \
-		$$(cat numbers.txt) 1>> $@ 2>> log
+	echo "Reading numbers from standar input" >>$@
+	echo Task2/main2.exe <Task2/input2.cs >>$@ 
 
-main.exe : main.cs input.dll
-	mcs -target:exe -out:$@ \
-		$(filter %.cs,$^) $(addprefix -reference:,$(filter %.dll,$^))
+	echo "Reading numbers from a file and writing to a file:" >>$@
+	mono Task3/main3.exe -input:Task3/inputfile.txt -output:Task3/outputfile.txt \
+		1>>$@ 2>>log
 
-input.dll : input.cs
-	mcs -target:library -out:$@ $(filter %.cs,$^)
+	echo "here is a copy of the output:" >>$@
+	cat Task3/outputfile.txt >> $@
 
-numbers.txt : Makefile
-	echo "-numbers:7,8,9" > $@
+main1.exe : Task1/main1.cs
+	mcs -out:Task1/main1.exe $^
 
-infile.txt : Makefile
-	echo 1 >$@
-	echo 2 >>$@
-	echo 3 >>$@
+main2.exe : Task2/main2.cs
+	mcs -out:Task2/main2.exe $^
 
-.PHONEY : clean
+main3.exe : Exercise3/main3.cs
+	mcs -out:Exercise3/main3.exe $^
+
+.PHONEY: clean
 clean:
-	$(RM) *.exe *.dll [Oo]ut* log*
-
-test:
-	echo $(RM)
+	rm -f *.exe Out.txt log
