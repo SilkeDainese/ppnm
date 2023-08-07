@@ -1,0 +1,25 @@
+Total sum: 18.9978964138526
+Parallel.For sum: 16.1865872691044
+real 1.85
+user 3.35
+sys 5.95
+Total sum: 18.997896413853
+Parallel.For sum: 15.6854207801148
+real 1.53
+user 3.09
+sys 6.03
+Total sum: 18.9978964138495
+Parallel.For sum: 16.233295260691
+real 1.65
+user 3.03
+sys 6.28
+Total sum: 18.9978964138499
+Parallel.For sum: 16.0082999529298
+real 1.65
+user 3.40
+sys 6.12
+Total sum: 18.9978964138526
+Parallel.For sum: 16.2091732892925
+real 1.73
+user 3.31
+sys 5.59
