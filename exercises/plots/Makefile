@@ -1,38 +1,38 @@
-all: Error_function.svg Gamma_function.svg Lngamma_function.svg Out.txt
+all: Erf.svg gamma.svg lngamma.svg Out.txt
 
-Error_function.svg : Out.txt Makefile
+Erf.svg : Out.txt Makefile
 	echo '\
 	set term svg;\
 	set out "$@";\
 	set title "Error function ";\
-	set xlabel "x-data";\
-	set ylabel "y-data";\
-	plot [-0.1:3.8][-0.1:1.6]\
-	 "Out.txt" index 0 using 1:2 pointsize 1 title "Data from Wikipedia"\
-	,"Out.txt" index 0 using 1:3 pointsize 0.5 title "Calculated values"\
+	set xlabel "x data";\
+	set ylabel "y data";\
+	plot [-0.2:4][-0.2:1.5]\
+	 "Out.txt" index 0 using 1:2 pointsize 1 title "Wikipedia table"\
+	,"Out.txt" index 0 using 1:3 pointsize 0.5 title "Computed values"\
 	'|gnuplot
 
-Gamma_function.svg: Out.txt Makefile
+gamma.svg: Out.txt Makefile
 	echo '\
 	set term svg;\
 	set out "$@";\
-	set title "Gamma function";\
-	set xlabel "x-data";\
-	set ylabel "y-data";\
-	plot [0:8][-1,1000]\
-	 "Out.txt" index 1 using 1:2 pointsize 1 title "Calculated values"\
+	set title "Gamma function: Gamma(n+1) = n!";\
+	set xlabel "x data";\
+	set ylabel "y data";\
+	plot [0:8][-1:1000]\
+	 "Out.txt" index 1 using 1:2 pointsize 1 title "Computed values"\
 	,"Out.txt" index 2 using 1:2 pointsize 1 title "Factorials"\
 	'|gnuplot
 
-Lngamma_function.svg : Out.txt Makefile
+lngamma.svg : Out.txt Makefile
 	echo '\
 	set term svg;\
 	set out "$@";\
 	set title "Logarithm of Gamma function ";\
-	set xlabel "x-data";\
-	set ylabel "y-data";\
+	set xlabel "x data";\
+	set ylabel "y data";\
 	plot [0:12][0:20]\
-	 "Out.txt" index 1 using 1:3 pointsize 1 title "Calculated values"\
+	 "Out.txt" index 1 using 1:3 pointsize 1 title "Computed values"\
 	,"Out.txt" index 2 using 1:3 pointsize 1 title "logarithm of Factorials"\
 	'|gnuplot
 
