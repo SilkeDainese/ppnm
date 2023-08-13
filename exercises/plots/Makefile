@@ -16,10 +16,10 @@ Gamma_function.svg: Out.txt Makefile
 	echo '\
 	set term svg;\
 	set out "$@";\
-	set title "Gamma function: Gamma(n+1) = n!";\
+	set title "Gamma function";\
 	set xlabel "x-data";\
 	set ylabel "y-data";\
-	plot [0:9][-1:900]\
+	plot [0:8][-1,1000]\
 	 "Out.txt" index 1 using 1:2 pointsize 1 title "Calculated values"\
 	,"Out.txt" index 2 using 1:2 pointsize 1 title "Factorials"\
 	'|gnuplot
