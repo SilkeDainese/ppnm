@@ -1,0 +1,13 @@
+Investigation of convergance of energies with respect to rmax.
+The spacing dr is fixed(0.2 Borh) and rmax is from 2 to 30.
+The three lowest energies(eigenvalues), using Jacob EVD, will be kompared to analytical values.
+See plot rmax.pdf
+The three lowest eigenvalues converge.
+________________________________________
+Investigation of convergance of energies with respect to npoints.
+npoints goes from 10 to 200
+See plot npoints.pdf
+The three lowest eigenvalues converget
+________________________________________
+Evaluation of the lowest eigenfunctions
+The parameters are rmax=30, npoints=200 and dr=0.2
