@@ -20,34 +20,34 @@ class main{
 			
 		}
 		// Solve function
-		public static vector solve(matrix Q, matrix R, vector b){
-			vector x = Q.T*b;
+		public static vector solve(matrix matrixQ, matrix matrixR, vector vectorb){
+			vector x =matrixQ.T*vectorb;
 			for(int i=x.size-1;i>=0;i--){
 				double sum=0;
-				for(int k=i+1;k<x.size;k++) sum = sum + R[i,k]*x[k];
-				x[i] = (x[i]-sum)/R[i,i];
+				for(int k=i+1;k<x.size;k++) sum = sum + matrixR[i,k]*x[k];
+				x[i] = (x[i]-sum)/matrixR[i,i];
 			}
 			return x;
 		}
 		
 		// Determinant function
-		public static double det(matrix R){
-			double prod = 1.0;
-			for(int i=0;i<R.size1;i++){
-				prod = prod * R[i,i];
+		public static double det(matrix matrixR){
+			double product = 1.0;
+			for(int i=0;i<matrixR.size1;i++){
+				product = product * matrixR[i,i];
 			}
-			return prod;
+			return product;
 		}
 
 		// Inverse function
-		public static matrix inverse(matrix Q, matrix R){
-			matrix B = new matrix(Q.size1, Q.size2);
-			for(int i=0;i<Q.size2;i++){
-				vector ei = new vector(Q.size2);
-				ei[i] = 1;
-				B[i] = QRGS.solve(Q, R, ei);
+		public static matrix inverse(matrix matrixQ, matrix matrixR){
+			matrix inverseMatrix = new matrix(matrixQ.size1, matrixQ.size2);
+			for(int i=0;i<matrixQ.size2;i++){
+				vector unitVector  = new vector(matrixQ.size2);
+				unitVector[i] = 1;
+				inverseMatrix[i] = QRGS.solve(matrixQ, matrixR, unitVector);
 			}
-			return B;
+			return inverseMatrix;
 		}
 				
 	}
