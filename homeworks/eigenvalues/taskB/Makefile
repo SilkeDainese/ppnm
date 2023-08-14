@@ -1,10 +1,10 @@
 .PHONEY: default
-default: out.txt rmax.svg npoints.svg eigenfunctions.svg
+default: out.txt rmax.pdf npoints.pdf eigenfunctions.pdf
 
 out.txt: main.exe
 	mono $<  | sed 's/,/./g' > $@
 
-rmax.svg: out.txt
+rmax.pdf: out.txt
 	echo "\
 	set terminal pdf \n\
 	set output '$@' \n\
@@ -21,7 +21,7 @@ rmax.svg: out.txt
 		-0.05553 with lines dashtype 2 title 'E_2 analytical' \n\
 	" | tee log.gpi | gnuplot
 
-npoints.svg: out.txt
+npoints.pdf: out.txt
 	echo "\
 	set terminal pdf \n\
 	set output '$@' \n\
@@ -38,7 +38,7 @@ npoints.svg: out.txt
 		-0.05553 with lines dashtype 2 title 'E_2 analytical' \n\
 	" | tee log.gpi | gnuplot
 
-eigenfunctions.svg: out.txt
+eigenfunctions.pdf: out.txt
 	echo "\
 	set terminal pdf \n\
 	set output '$@' \n\
