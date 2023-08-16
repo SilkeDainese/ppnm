@@ -5,9 +5,9 @@ using static linspline;
 
 public class main{
 	public static void Main(){
-		//Tabulated values [x, y] to test lspline after. Using values for at sinus-function.
-		double[] xs = new double[] {0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0};
-		double[] ys = new double[13];
+		// Making values for [x, y] to test linspline. Chosen the sinus-function.
+		double[] xs = new double[] {0, 0.25, 0.5,0.75, 1.0,1.25, 1.5,1.75, 2.0,2.25, 2.5,2.75, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0};
+		double[] ys = new double[19];
 		for(int i=0; i<xs.Length; i++){ //Findes the y-values for a sinus-function.
 			ys[i] = Sin(xs[i]);
 		}
