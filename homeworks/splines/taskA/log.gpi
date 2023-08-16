@@ -1,0 +1,8 @@
+set terminal png 
+set output 'linspline_gnuplot.png' 
+set xlabel 'x' 
+set ylabel 'y' 
+set grid 
+set key left top 
+plot [0:6] [-1:1] 'out.txt' index 0 using 1:2 with points title 'Tabulated', 'out.txt' index 1 using 1:2 with lines title 'Linear interpolation', 'out.txt' index 1 using 1:3 with lines title 'Integral(cos(x))' 
+
