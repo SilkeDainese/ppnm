@@ -1,8 +1,0 @@
-set terminal pdf 
-set output 'plot_fit.pdf' 
-set xlabel 'Time[days]' 
-set ylabel 'Activity[rel. units]' 
-set grid 
-set key left top 
-plot [] [] 'out.txt' index 0 using 1:2:3 with yerrorbars title 'Data', 	'out.txt' index 1 using 1:2 with lines title 'Fit' 
-

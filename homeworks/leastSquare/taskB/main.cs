@@ -35,11 +35,13 @@ public class main{
 		}
 		
 		//Saving the fit information in its own file
-		using(var outfile = new System.IO.StreamWriter("fitlog.txt")){
+		using(var outfile = new System.IO.StreamWriter("out.txt")){
+			outfile.WriteLine("part b:");
 			outfile.WriteLine("\n");
-			outfile.WriteLine($"Fit parameters: a = {cs[0]}, lambda = {cs[1]}");
-			outfile.WriteLine($"The half-life is found by Ln(2)/lambda and is {Log(2)/(-cs[1])} days");
-			outfile.WriteLine("This agrees relativly well with the modern dat table value of 3.63 days(wiki)");
+			outfile.WriteLine("Covariance Matrix");
+			outfile.WriteLine($"{conv}")
+			outfile.WriteLine($"Fitted half-life is found by Ln(2)/lambda and is {Log(2)/(-cs[1])} days");
+			outfile.WriteLine("So this is not within the modern dat errorbar value");
 		}
 	}
 
