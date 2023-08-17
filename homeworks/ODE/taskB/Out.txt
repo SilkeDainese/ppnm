@@ -1,0 +1,3 @@
+Part B is performed where the Driver in ode.cs is imporved. This is done such that the driver records the path only if the generic lists for x and y are initialized. If the lists are null the driver only return y. Also the acceptence are cnaghed.
+
+An example Lotka-Volterra system are reproduced. See LotkaVolterraSystem.svg
