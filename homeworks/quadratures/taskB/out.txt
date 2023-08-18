@@ -1,0 +1,8 @@
+Test of integration from part A and new from part B:
+Integration of 1/sqrt(x) from 0 to 1 = 1.99996150007805 and took 8576 iterations - part A
+Integration of 1/sqrt(x) from 0 to 1 = 1.99999730808565 and took 24 iterations - part B
+Integration of ln(x)/sqrt(x) from 0 to 1 = -3.9999521745773 and took 8660 iterations - part A
+Integration of ln(x)/sqrt(x) from 0 to 1 = -3.9999234350396 and took 108 iterations - part B
+Python scipy comparison:
+Integration of 1/sqrt(x) from 0 to 1 = 1.9999999999999984 and took 231 iterations
+Integration of ln(x)/sqrt(x) from 0 to 1 = -4.000000000000085 and took 315 iterations
