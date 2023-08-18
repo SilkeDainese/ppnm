@@ -1,0 +1,19 @@
+Testing implementation of Monte Carlo integration plainmc methode:
+
+
+Integration of a 2 dimentional function: x*y dx dy, with x = [0,1] and y=[0,1]:
+The result is 0.249861703573594 and the estimated error is 0.000987511261030429 and the actual error is -0.24901248873897- part A.
+The result is 0.249949861996977 and the estimated error is 0.000985893087447427 and the actual error is -5.01380030227538E-05 - part B.
+Should be 0.25
+
+
+Integration of a 2 dimentional function: x*sin(y) dx dy, with x = [0,1] and y=[0,pi]:
+The result is 1.00370989373475 and the estimated error is 0.00359772478788312 and the actual error is 0.00370989373474728 - part A.
+The result is 0.99994483617818 and the estimated error is 0.00359143054857476 and the actual error is -5.51638218198036E-05 - part B.
+Should be 1
+
+
+Integration of a 3 dimentional function: (1-cos(x)*cos(y)*cos(z)*pi^3)^-1 dx dy dz, with x = [0,pi], y=[0,pi] and z=[0,pi]:
+The result is 1.35815229488989 and the estimated error is 0.014951105449917 and the actual error is -0.035047705110107 - part A.
+The result is 1.37933601570414 and the estimated error is 0.0198214693116577 and the actual error is -0.0138639842958561 - part B.
+Should be 1.3932039296856768591842462603255
