@@ -1,0 +1,9 @@
+set terminal pdf 
+set output 'higgs.pdf' 
+set xlabel 'Energy[GeV]' 
+set ylabel 'Cross section[arb. units]' 
+set grid 
+set title 'Higgs boson' 
+set key left top 
+plot [] [] 'data.txt' index 0 using 1:2:3 with yerrorbars title 'Data points', 	'fit1.txt' index 0 using 1:2 with lines title 'Fit' 
+

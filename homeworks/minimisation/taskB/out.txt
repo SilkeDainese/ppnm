@@ -1,0 +1,10 @@
+The implemented minimization function from part A is used to investigate the Higgs boson
+The Breit-Wigner function is fitted, by minimizing the fit function
+x0=       120          3          6 
+The initial guess is (120, 3, 6)
+From the algoritm:
+
+	Mass = 125.976448860377
+	Width = -1.78656664189583
+	Amplitude = 850.29279848006
+
