@@ -1,0 +1,14 @@
+Test function f(x,y)=(1-x)^2+100*(y-x^2)^2
+Finding the minimum of the function
+Start guess (0,0)
+The minimum was found at (0.999984642801962,0.999969232181272)
+Here f(x,y) = 2.36131454998171E-10
+There is one minimum at (1,1), for f(x,y)=0
+
+
+Test function f(x,y)=(x^2+y-11)^2+(x+y^2-7)^2
+Finding the minimum of the function
+Start guess (1,1)
+The minimum was found at (2.99999987176844,2.00000015119024)
+Here f(x,y) = 6.09250418581111E-13
+There is one minimum at (3,2), for f(x,y)=0
