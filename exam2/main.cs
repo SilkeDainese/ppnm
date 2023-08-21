@@ -135,34 +135,6 @@ public class main{
                 		}
             		}
 		
-	    		else if(arg=="Area")
-	    		{
-
-                		double[] x = {-5,-4,-2.5,-1,0,2.5,5,7.5,10};
-                		double[] y = {0,3,6,30,10,8,6,3,0};
-
-				akima spline = new akima(); 
-				spline.Interpolation(x,y);
-
-				double a = x.Min();
-				double b = x.Max();
-
-				double area = spline.Integrate(a, b);
-		
-				WriteLine("Data Points");
-		
-				for(int i=0; i<x.Length-1;i++)
-                        	{
-                                	WriteLine($"x={x[i]} and y={y[i]}");
-                        	}
-
-		
-				WriteLine($"x=1.5, interpolated value={spline.Evaluate(1.5)}");
-				WriteLine($"Area under data poins between 0 and 12 using akima: {area}");
-
-
-	    		}
-
         	}
 	}//Main
 }//main

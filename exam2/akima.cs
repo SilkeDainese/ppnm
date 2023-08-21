@@ -2,21 +2,17 @@ using System;
 using static System.Math;
 
 public class akima{
-        private double[] x;
-        private double[] y;      //Datavalues
-        private double[] h1;
-        private double[] h2;
-        private double[] h3; //Akima Coefficients
-        private int count;
+	public double[] x {get;set;}
+	public double[] y {get;set;}
+	public double[] h1 {get;set;}
+	public double[] h2 {get;set;}
+	public double[] h3 {get;set;}
+	public int count {get;set;}
 
-        // Define constructor
-	private akima(double[] x, double[] y, double[] h1, double[] h2, double[] h3, int count){
-	    	this.x = x;
-		this.y = y;
-		this.h1 = h1;
-		this.h2 = h2;
-		this.h3 = h3;
-		this.count = count;
+	public akima()
+	{
+	}			
+	
 	}// Akima
 	public akima Interpolation(double[] xData, double[] yData){
                 int count = xData.Length;
