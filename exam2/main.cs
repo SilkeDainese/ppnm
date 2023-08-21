@@ -44,7 +44,8 @@ public class main{
                 		double[] x = {-5,-4,-2.5,-1,0,2.5,5,7.5,10};
                 		double[] y = {0,3,6,30,10,8,6,3,0};
 
-				akima spline = akima.Interpolation(x,y);
+				akima spline = new akima();
+				spline.Interpolation(x,y);
 			
 				for(double dx=x.Min()+1.0/100;dx<=x.Max();dx+=1.0/100){
 
@@ -117,12 +118,12 @@ public class main{
                     			var xys = rnd_data[i].Split(' ');
                     			var x = xys[0].Replace(",", ".");
                     			var y = xys[1].Replace(",", ".");
-                    			double.TryParse(x, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out xsdata[i]);
+                    			double.TryParse(x, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out xsData[i]);
                     			double.TryParse(y, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out ysData[i]);
                 		}
 
                 		Array.Sort(xsData, ysData);
-                		AkimaSpline spline = akima.Interpolation(xTestData, yTestData);
+                		akima spline = akima.Interpolation(xsData, ysData);
 
                 		double startInterpValue = xsData.Min();
                 		double endInterpValue = xsData.Max();
@@ -140,7 +141,8 @@ public class main{
                 		double[] x = {-5,-4,-2.5,-1,0,2.5,5,7.5,10};
                 		double[] y = {0,3,6,30,10,8,6,3,0};
 
-				AkimaSpline spline = akima.Interpolation(x,y);
+				akima spline = new akima(); 
+				spline.Interpolation(x,y);
 
 				double a = x.Min();
 				double b = x.Max();
