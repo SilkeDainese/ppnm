@@ -1,0 +1,21 @@
+set terminal svg background "white"
+set key top right
+set output "CubicAkima.svg"
+set xlabel "x"
+set ylabel "y"
+set xzeroaxis
+set yzeroaxis
+set grid
+set samples 800
+set multiplot layout 2,1
+
+set title "Interpolation"
+plot "Akimacompare.data" using 1:2 with lines linetype 1 title "Akima interpolation", \
+     "Cubic.data" using 1:2 with lines linetype 2 title "Cubic interpolation", \
+     "points.data" using 1:2 with points pt 7 ps 0.3 lc rgb "black" title "Interpolated points"
+
+set title "Interpolation slopes"
+set xlabel "x"
+set ylabel "Slope [dy/dx]"
+plot "Akimacompare.data" using 1:3 with lines linetype 1 title "Akima slope", \
+     "Cubic.data" using 1:3 with lines linetype 2 title "Cubic slope"
