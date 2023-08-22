@@ -1,6 +1,6 @@
 set terminal svg background "white"
 set key bottom right
-set output "Plots.svg"
+set output "plot.svg"
 set xlabel "x-values"
 set ylabel "y-values"
 set tics out
@@ -13,4 +13,4 @@ set title "Akima (sub-)spline interpolation"
 
 # First plot with points data
 plot "testpoints.data" using 1:2 with points pt 7 ps 0.4 title "Random generated data",\
- "Akima.data" using 1:2 with lines linetype 1 lc rgb "red" title "Akima (sub-)spline interpolation fit"
+ "interpolated.data" using 1:2 with lines linetype 1 lc rgb "red" title "Akima (sub-)spline interpolation fit"

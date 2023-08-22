@@ -1,38 +1,24 @@
-All : testpoints.data Akima.data AkimaSlope.data plot.svg Compare.svg Out.txt
+# Declare the targets
+all: plot.svg
 
-Compare.svg : compare.gpi AkimaSlope.data CubeSlope.data points.data
-	gnuplot $<
+# Target to generate the plot.svg file
+plot.svg: plot.gpi interpolated.data
+	gnuplot plot.gpi
 
-plot.svg : plot.gpi testpoints.data
-	gnuplot $<
+# Generate interpolated.data using the Program.exe
+interpolated.data: Program.exe
+	mono Program.exe > $@
 
-points.data : main.exe
-	mono $< dataPoints | sed -e's/,/./g' > $@
+# Compile the C# program
+Program.exe: Program.cs akima.dll dto.cs
+	mcs Program.cs dto.cs -reference:akima.dll
 
-CubeSlope.data : main.exe
-	mono $< CubeSlope | sed -e's/,/./g' > $@
-
-testpoints.data : main.exe
-	mono $< test | sed -e's/,/./g' > $@
-
-AkimaSlope.data : main.exe
-	mono $< AkimaSlope | sed -e's/,/./g' > $@
-
-Akima.data : main.exe
-	mono $< AkimaSubSplineInetpolation | sed -e's/,/./g' > $@
-
-Out.txt : main.exe
-	mono $< Area | sed -e's/,/./g' > $@ 
-	cat $@
-
-main.exe : main.cs lib.dll
-	mcs -target:exe -out:$@ \
-		$(filter %.cs,$^) $(addprefix -reference:,$(filter %.dll,$^))
-
-
-lib.dll : AkimaSpline.cs CubeSpline.cs
+# Compile Akima.dll libary
+akima.dll: akima.cs dto.cs
 	mcs -target:library -out:$@ $^
 
-
+# Declare the clean target
+.PHONY: clean
 clean:
-	rm -rf *.exe lib.dll *.svg *.data Out.txt
+	rm -f *.txt *.dll *.exe *.pdf
+
