@@ -3,7 +3,7 @@
 For my examination project, I have successfully implemented a comprehensive Akima interpolation and evaluation method in the file [akima.cs](akima.cs). This project aims to provide a practical demonstration of the Akima sub-spline interpolation technique.
 
 ### Implementation
-In [akima.cs}(akima.cs), the core functionality is divided into two key methods:
+In [akima.cs](akima.cs), the core functionality is divided into two key methods:
 
 ### Interpolation Method
 In this method, the program calculates the coefficients required for the Akima spline. It begins by computing slopes between adjacent data points and then proceeds to determine the necessary weights and coefficients for each spline segment.
