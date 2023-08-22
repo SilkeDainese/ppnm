@@ -6,8 +6,6 @@ set ylabel "y-values"
 set tics out
 set xzeroaxis
 set yzeroaxis
-set samples 800
-set key right bottom
 set title "Akima (sub-)spline interpolation"
 
 

@@ -10,18 +10,24 @@ public class Program {
     {
 
         var random = new Random();
-        var dataSize = random.Next(5,15);
+        var dataSize = random.Next(5,10);
         var xsData = new double[dataSize];
         var ysData = new double[dataSize];
 
-        using (StreamWriter writer = new StreamWriter("testpoints.data", true))
-        {
-            for (int i = 0; i < dataSize; i++)
-            {
-                xsData[i] = random.NextDouble();
-                ysData[i] = random.NextDouble();
-                writer.WriteLine($"{xsData[i]} {ysData[i]}");
-            }
+        //using (StreamWriter writer = new StreamWriter("testpoints.data", true))
+	using (StreamWriter writer = new StreamWriter("testpoints.data"))
+
+		{
+		for (int i = 0; i < dataSize; i++)
+		{
+			xsData[i] = random.NextDouble();
+			ysData[i] = random.NextDouble();
+		}
+		Array.Sort(xsData,ysData);
+		for (int i = 0; i < dataSize; i++)
+                {
+			writer.WriteLine($"{xsData[i]} {ysData[i]}");
+		}
         }
 
         var amkima = new Akima(xsData, ysData, 1000);
@@ -30,9 +36,9 @@ public class Program {
 
         using (StreamWriter writer = new StreamWriter("interpolated.data", true))
         {
-            for (double i = 0; i < dto.Xvalues.Count-1;  i++)
+            for (int i = 0; i < dto.Xvalues.Count;  i++)
             {
-                writer.WriteLine($"{dto.Xvalues} {dto.Yvalues[i]}");
+                writer.WriteLine($"{dto.Xvalues[i]} {dto.Yvalues[i]}");
             }
         }
     }
