@@ -3,7 +3,7 @@
 For my examination project, I have successfully implemented a comprehensive Akima interpolation and evaluation method in the file [akima.cs](akima.cs). This project aims to provide a practical demonstration of the Akima sub-spline interpolation technique.
 
 ### Implementation
-In akima.cs, the core functionality is divided into two key methods:
+In [akima.cs}(akima.cs), the core functionality is divided into two key methods:
 
 ### Interpolation Method
 In this method, the program calculates the coefficients required for the Akima spline. It begins by computing slopes between adjacent data points and then proceeds to determine the necessary weights and coefficients for each spline segment.
@@ -15,10 +15,10 @@ This method handles the actual interpolation process. It generates evenly spaced
 The main execution is outlined in the Program.cs file:
 
 1. An array of random x and y values is generated.
-2. These values are sorted and written to a file named "testpoints.data".
+2. These values are sorted and written to a file named "[testpoints.data](testpoints.data)".
 3. The Akima interpolation method is applied to these data points, resulting in a smoother curve.
-4. The resulting interpolated curve is saved to another file named "interpolated.data"
-5. The project further encompasses plotting this data, which is visualized in the output file "plot.svg".
+4. The resulting interpolated curve is saved to another file named "[interpolated.data](interpolated.data)"
+5. The project further encompasses plotting this data, which is visualized in the output file "[plot.svg](plot.svg)".
 
 
 
