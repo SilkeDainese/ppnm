@@ -5,10 +5,10 @@ For my examination project, I have successfully implemented a comprehensive Akim
 ### Implementation
 In [akima.cs](akima.cs), the core functionality is divided into two key methods:
 
-### Interpolation Method
+1. ### Interpolation Method
 In this method, the program calculates the coefficients required for the Akima spline. It begins by computing slopes between adjacent data points and then proceeds to determine the necessary weights and coefficients for each spline segment.
 
-### Evaluate Method
+2. ### Evaluate Method
 This method handles the actual interpolation process. It generates evenly spaced x values using the SpaceListEvenly function and evaluates the corresponding y values through the EvaluateInternal function. The latter function, employing a binary search, identifies the appropriate segment for interpolation. It then utilizes the coefficients obtained during the interpolation to calculate the interpolated y value.
 
 ### Execution
