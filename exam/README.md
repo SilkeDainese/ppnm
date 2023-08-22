@@ -1,17 +1,17 @@
 ## Examination project: Number 2 - Akima sub-spline
-###Description
-For my examination project, I have successfully implemented a comprehensive Akima interpolation and evaluation method in the file akima.cs. This project aims to provide a practical demonstration of the Akima sub-spline interpolation technique.
+### Description
+For my examination project, I have successfully implemented a comprehensive Akima interpolation and evaluation method in the file [akima.cs](akima.cs). This project aims to provide a practical demonstration of the Akima sub-spline interpolation technique.
 
-###Implementation
-In [akima.cs]{akima.cs}, the core functionality is divided into two key methods:
+### Implementation
+In akima.cs, the core functionality is divided into two key methods:
 
-###Interpolation Method
+### Interpolation Method
 In this method, the program calculates the coefficients required for the Akima spline. It begins by computing slopes between adjacent data points and then proceeds to determine the necessary weights and coefficients for each spline segment.
 
-###Evaluate Method
+### Evaluate Method
 This method handles the actual interpolation process. It generates evenly spaced x values using the SpaceListEvenly function and evaluates the corresponding y values through the EvaluateInternal function. The latter function, employing a binary search, identifies the appropriate segment for interpolation. It then utilizes the coefficients obtained during the interpolation to calculate the interpolated y value.
 
-###Execution
+### Execution
 The main execution is outlined in the Program.cs file:
 
 1. An array of random x and y values is generated.
