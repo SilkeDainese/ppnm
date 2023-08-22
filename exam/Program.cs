@@ -34,7 +34,7 @@ public class Program {
         amkima.Interpolation();
         var dto = amkima.Evaluate();
 
-        using (StreamWriter writer = new StreamWriter("interpolated.data", true))
+        using (StreamWriter writer = new StreamWriter("interpolated.data"))
         {
             for (int i = 0; i < dto.Xvalues.Count;  i++)
             {
