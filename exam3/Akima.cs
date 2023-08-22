@@ -7,7 +7,7 @@ public class akima
 	public akima(double[] xData, double[] yData)
 		x = xData;
 		y = yData;
-		int n = xData.Length
+		int n = xData.Length;
 		b = new double[n];
 		c = new double[n-1];
 		d = new double[n-1];
@@ -33,7 +33,7 @@ public class akima
 			if w1[i] + w1[i+1] == 0
 				b[i] = (w1[i+1]*m[i]+w[i]*m[i+1]) / (w[0] + w[1]); 
 			else 
-		}		b[i] = (w1*m[i-1]+ w2*m[i])/(w1+w2);
+		}		b[i] = (w1*m[i-1]+ w2*m[i])/(w1+w2);;
 		
 		// Calculate c and d akima coefficients
 		for(int i=0;i<n-1;i++)
