@@ -30,7 +30,7 @@ public class Program {
 
         using (StreamWriter writer = new StreamWriter("interpolated.data", true))
         {
-            for (int i = 0; i < dto.Xvalues.Count; i++)
+            for (int i = 0; i < dto.Xvalues.Count-1;  i++)
             {
                 writer.WriteLine($"{dto.Xvalues[i]} {dto.Yvalues[i]}");
             }
