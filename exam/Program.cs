@@ -10,7 +10,7 @@ public class Program {
     {
 
         var random = new Random();
-        var dataSize = random.Next(10, 50);
+        var dataSize = random.Next(5,15);
         var xsData = new double[dataSize];
         var ysData = new double[dataSize];
 
