@@ -28,8 +28,8 @@ public static class integration{
 		}
 	}
 	
-	//Clenshaw–Curtis variable transformation(vt)
-	public static double vt_integrate(Func<double,double> f, 
+		//Clenshaw–Curtis variable transformation(vt)
+	public static double vartran_integrate(Func<double,double> f, 
 		double a, double b,
 		double delta=0.001, double epsilon=0.001,
 		double f2=NaN, double f3=NaN)
@@ -39,4 +39,4 @@ public static class integration{
 	}
 
 
-}//class
+}//integration

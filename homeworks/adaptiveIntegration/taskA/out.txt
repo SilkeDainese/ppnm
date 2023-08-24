@@ -1,0 +1,5 @@
+Test of integration:
+Integral of the square root of x from 0 to 1 = 0.666953909054655, expected: 0.6667
+Integral of 1 divided by the square root of x from 0 to 1 = 1.99996150007805, expected: 2
+Integral of 4 times the square root of 1 minus x squared from 0 to 1 = 3.14168489828595, expected: 3.14
+Integral of the natural logarithm of x divided by the square root of x from 0 to 1 = -3.9999521745773, expected: -4

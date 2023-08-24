@@ -4,7 +4,7 @@ using static System.Math;
 
 public class main{
 	public static void Main(){
-		WriteLine($"Test of integration from part A and new from part B:");
+		WriteLine($"Integration tests comparing with different methods from A and B:/n");
 		double a = 0.0, b = 1.0;
 		
 		int i = 0, j = 0, k = 0, l = 0; //To record the number of integrand evaluations
