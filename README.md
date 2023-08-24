@@ -15,10 +15,9 @@ I didn't stop at the implementation; I took it a step further by creating visual
 
 In summary, my project demonstrated a well-executed implementation of the Akima (sub-)spline routine. I showcased its versatility by testing it on random data, and I took care to make the code elegant and easy to understand. The visualizations provided tangible evidence of the success of the interpolation, thereby achieving a solid overall rating of 7 out of 10.
 
-## Exercises: 
- ======================================
+### Exercises: 
 |numb| Exercise      | Done/Not Done   |
- ======================================
+==================================
 | 1  | Posix         |      Done       |
 ---------------------------------------
 | 2  | Git           |      Done       |
