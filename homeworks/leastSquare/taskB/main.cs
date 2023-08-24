@@ -39,7 +39,7 @@ public class main{
 			outfile.WriteLine("part b:");
 			outfile.WriteLine("\n");
 			outfile.WriteLine("Covariance Matrix");
-			outfile.WriteLine($"{conv}")
+			outfile.WriteLine($"{conv}");
 			outfile.WriteLine($"Fitted half-life is found by Ln(2)/lambda and is {Log(2)/(-cs[1])} days");
 			outfile.WriteLine("So this is not within the modern dat errorbar value");
 		}
