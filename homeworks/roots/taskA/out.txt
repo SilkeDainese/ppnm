@@ -1,28 +1,26 @@
-Testing of Newton's method with numerical Jacobian and back-tracking linesearch
-
-
-Test function f(x)=x^2
-Finding the extremum of f(x) by searching for the roots of the gradient f'(x)=2x
-The extremum is found at
+Demonstrating Newton's method with numerical Jacobian and back-tracking linesearch /n
+Test function f(x) = x^2
+Finding the extremum of f(x) by searching for the roots of the gradient f'(x) = 2x
+The extremum is found at:
          0 
-and the analytical result is 0
+The analytical result is 0
 
 
-Test function f(x)=log(x)*x^2
-Finding the extremum of f(x) by searching for the roots of the gradient f'(x)=x+2*x*log(x)
-The extremum is found at
+Test function f(x) = log(x) * x^2
+Finding the extremum of f(x) by searching for the roots of the gradient f'(x) = x + 2 * x * log(x)
+The extremum is found at:
      0.607 
-and the analytical result is 0.6065
+The analytical result is 0.6065
 
 
-Test function f(x,y)
-The extremum is found at
+Test function f(x, y)
+The extremum is found at:
       4.93       4.93 
-and the analytical result is (5,5)
+The analytical result is (5, 5)
 
 
-Test function f(x,y)=(1-x)^2+100*(y-x^2)^2
-Finding the extremum of f(x) by searching for the roots of the gradient f'(x,y)=(-2*(1-x)-400*x*(y-x^2), 200(y-x^2))
-The extremum is found at
+Test function f(x, y) = (1 - x)^2 + 100 * (y - x^2)^2
+Finding the extremum of f(x) by searching for the roots of the gradient f'(x, y) = (-2 * (1 - x) - 400 * x * (y - x^2), 200 * (y - x^2))
+The extremum is found at:
          1          1 
-and the analytical result is (1,1)
+The analytical result is (1, 1)
