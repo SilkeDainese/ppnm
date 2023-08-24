@@ -29,20 +29,20 @@ public class mcintegration{
 	}//plainmc
 
 
-	public static double corput(int n, int Base){
-		double q = 0, bk = 1.0/Base;
-		while(n>0){
-			q += (n % Base)*bk;
-			n /= Base;
-			bk /= Base;
+	public static double corput(int number, int baseValue){
+		double result = 0, increment = 1.0 / baseValue;
+		while(number > 0){
+			result += (number % baseValue) * increment;
+			number /= baseValue;
+			increment /= baseValue;
 		}
-		return q;
+		return result;
 	}
 	
 	public static double[] halton(int n, int d, int sec=0){
 		int[] Base = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67};
 		if(d>Base.Length){
-			throw new System.Exception("Halton method does not work - dimension is too large");
+			throw new System.Exception("Don't work, dimension too large");
 		} 
 		double[] x = new double[d];
 		for(int i=0; i<d; i++){
