@@ -1,45 +1,45 @@
-Random generated 3 by 3 matrix
+Randomly generated 3 by 3 matrix
 
-     0.165      0.742      0.998 
-     0.742      0.332      0.473 
-     0.998      0.473      0.538 
+      0.34      0.516       0.96 
+     0.516      0.857      0.359 
+      0.96      0.359      0.823 
 
 
-Jacob eigenvalue diagonalization of A. Number of sweeps=4
+Eigenvalue diagonalization of A using Jacobi method. Number of sweeps = 4
 Matrix D, with eigenvalues on the diagonal:
 
-     -0.76   -7.9e-10  -2.09e-15 
-  -7.9e-10    -0.0473   8.47e-22 
-  -2.1e-15  -1.53e-17       1.84 
+    -0.439  -1.28e-09     -5e-15 
+ -1.28e-09      0.543          0 
+ -4.94e-15   7.69e-17       1.92 
 
 
-Checking that V^T*A*V=D
+Verifying that V^T * A * V = D
 
-     -0.76   -7.9e-10  -2.22e-15 
-  -7.9e-10    -0.0473  -7.98e-17 
- -2.11e-15   1.11e-16       1.84 
+    -0.439  -1.28e-09  -5.05e-15 
+ -1.28e-09      0.543  -5.55e-17 
+ -5.11e-15  -2.22e-16       1.92 
 True
 
 
-Checking that V*D*V^T=A
+Verifying that V * D * V^T = A
+
+      0.34      0.516       0.96 
+     0.516      0.857      0.359 
+      0.96      0.359      0.823 
 True
 
-     0.165      0.742      0.998 
-     0.742      0.332      0.473 
-     0.998      0.473      0.538 
 
-
-Checking that V^T*V=I
+Verifying that V^T * V = I
 True
 
-         1  -1.11e-16          0 
- -1.11e-16          1  -5.55e-17 
-         0  -5.55e-17          1 
+         1   5.55e-17   5.55e-17 
+  5.55e-17          1  -1.11e-16 
+  5.55e-17  -1.11e-16          1 
 
 
-Checking that V*V^T=I
+Verifying that V * V^T = I
 True
 
-         1   5.55e-17   1.11e-16 
-  5.55e-17          1   2.22e-16 
-  1.11e-16   2.22e-16          1 
+         1          0  -1.11e-16 
+         0          1          0 
+ -1.11e-16          0          1 
