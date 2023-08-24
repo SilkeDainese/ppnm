@@ -6,13 +6,12 @@ public class main{
 	public static void Main(){
 		//RMAX:
 		using(var outfile = new System.IO.StreamWriter("function_log.txt")){
-			outfile.WriteLine($"Investigation of energy convergence with respect to parameters.");
-			outfile.WriteLine($"The spacing dr is fixed(0.2 Borh) and rmax is from 2 to 30.");
+			outfile.WriteLine($"Investigation of energy convergence with respect to parameters");
+			outfile.WriteLine($"The three lowest energies converge");
 			outfile.WriteLine($"See plot rmax.pdf");
-			outfile.WriteLine($"The three lowest eigenvalues converge.");
-//		}
-
 		
+		}
+
 		//Building the Hamiltonian matrix:
 		for(int r_max=2; r_max<30; r_max++){
 			double rmax = r_max;
@@ -23,7 +22,7 @@ public class main{
 				r[i] = dr*(i+1);
 			}
 			matrix H = new matrix(npoints,npoints);
-			for(int i=0; i<npoints-1; i++){ //sets the diagonals of the H matrix
+			for(int i=0; i<npoints-1; i++){
 				matrix.set(H,i,i,-2);
 				matrix.set(H,i,i+1,1);
 				matrix.set(H,i+1,i,1);
@@ -48,7 +47,7 @@ public class main{
  			outfile.WriteLine($"\n Investigation of convergance of energies with respect to npoints.");
 			outfile.WriteLine($"npoints goes from 10 to 200");
 			outfile.WriteLine($"See plot npoints.pdf");
-			outfile.WriteLine($"The three lowest eigenvalues converge");
+			outfile.WriteLine($"Three lowest eigenvalues converge");
 
 		WriteLine($"\n");
 
@@ -83,8 +82,8 @@ public class main{
 		WriteLine($"\n");
 
 		//Eigenfunctions(wavefunctions)
-			outfile.WriteLine($"Lowest eigenfunctions evaluation");
-			outfile.WriteLine($"Parameters: rmax=30, npoints=200 and dr=0.2");
+			outfile.WriteLine($"\n Evaluation of the lowest eigenfunctions");
+			outfile.WriteLine($"The parameters are rmax=30, npoints=200 and dr=0.2");
 		
 		int npoints1 = 200;
 		double rmax1 = 30;
@@ -123,9 +122,7 @@ public class main{
 		}
 
 
-		} //outfile
-
-	
+			
 	}//Main
 
 }//class
